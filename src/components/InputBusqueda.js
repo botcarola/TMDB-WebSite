@@ -2,14 +2,16 @@ import { GoSearch } from "react-icons/go";
 
 const InputPeliculas = ({tipo}) => {
 
-    return (     
-        <form className="flex flex-wrap justify-between md:flex-row">
-            <input type="text" name="busqueda" placeholder={tipo}  className="flex-1px-4 m-1 text-gray-700 placeholder-gray-400 bg-transparent  appearance-none lg:h-12 dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0" />
-            <button className="flex items-center justify-center w-full p-2 m-1 text-white transition-colors duration-200 transform rounded-md lg:w-12 lg:h-12 lg:p-0 bg-primary">
-                <GoSearch />
-            </button>
-        </form>            
+    return (
+    <form className="relative text-gray-600">
+        <input type="text" name="serch" placeholder={tipo} className="bg-stone-800 text-slate-200 h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"/>
+        <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+            <GoSearch />
+        </button>
+    </form>
     )
 }
 
 export default InputPeliculas;
+
+
