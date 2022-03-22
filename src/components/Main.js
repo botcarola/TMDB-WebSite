@@ -11,7 +11,7 @@ const Home = () => {
         <FetchHome 
         rutaCategoria="movies"
         tipoCategoria="Películas" 
-        urlCategoria={popularMovies} 
+        urlCategoria={popularMovies}
         />
         
         <FetchHome

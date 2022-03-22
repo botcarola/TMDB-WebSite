@@ -4,22 +4,24 @@ import { BsArrowRightShort } from "react-icons/bs";
 import useFetch from "./useFetch";
 import SimpleCard from "./SimpleCard"
 
-const FetchHome = ({rutaCategoria, tipoCategoria, urlCategoria}) => {
+const FetchHome = ({rutaCategoria, tipoCategoria, urlFetch}) => {
 
-    const elementos = useFetch(urlCategoria)
-    const recortados = elementos.slice(0,5)   
+    const elementos = useFetch(urlFetch)
+    const recortados = elementos.slice(0,5) 
+    console.log(recortados) 
 
     return (
-    <div className="flex flex-col m-10 mb-10">
-        <Link className="flex items-center text-xl text-white" to ={`/${rutaCategoria}`}>
+    <div className="flex flex-col m-10 mb-5">
+        <Link className="flex items-center text-3xl text-white mb-4 font-thin" to ={`/${rutaCategoria}`}>
             {tipoCategoria} que son tendencia
-        <BsArrowRightShort />
+        <BsArrowRightShort className="ml-3"/>
         </Link>
         <div className="flex">
             {recortados.map( curr => 
             <Link to="/" key={curr.id}>
                 <SimpleCard 
-                    imagen={curr.poster_path}            
+                    imagen={curr.poster_path}
+                    titulo={!!curr.title ? curr.title : curr.name}            
                 />
             </Link>
             )}
