@@ -7,23 +7,24 @@ import SimpleCard from "./SimpleCard"
 const FetchHome = ({rutaCategoria, tipoCategoria, urlCategoria}) => {
 
     const elementos = useFetch(urlCategoria)
-    console.log(elementos)
+    const recortados = elementos.slice(0,5)   
 
     return (
-    <>
-        <Link to ={`/${rutaCategoria}`}>
+    <div className="flex flex-col m-10 mb-10">
+        <Link className="flex items-center text-xl text-white" to ={`/${rutaCategoria}`}>
             {tipoCategoria} que son tendencia
         <BsArrowRightShort />
         </Link>
-        {elementos.map( curr => 
-        <Link to="/" >
-            <SimpleCard 
-            imagen={curr.poster_path}
-            key={curr.id}
-            />
-        </Link>
-        )}            
-    </>
+        <div className="flex">
+            {recortados.map( curr => 
+            <Link to="/" key={curr.id}>
+                <SimpleCard 
+                    imagen={curr.poster_path}            
+                />
+            </Link>
+            )}
+        </div>            
+    </div>
     )
 }
 

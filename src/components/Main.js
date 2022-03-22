@@ -7,7 +7,7 @@ import { popularMovies, popularSeries } from "../auxiliar/variablesAuxiliares";
 const Home = () => {
 
     return(
-        <>
+        <main className='flex flex-col items-center mb-10'>
         <FetchHome 
         rutaCategoria="movies"
         tipoCategoria="Películas" 
@@ -19,7 +19,7 @@ const Home = () => {
         tipoCategoria="Series"
         urlCategoria={popularSeries}
         />
-        </>      
+        </main>      
     )
 }
 
