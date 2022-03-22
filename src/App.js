@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Main from "./components/Main";
 import Movies from "./components/Movies";
 import Tv from "./components/Tv";
 
@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter>
         <Nav/>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Main />} />
               <Route path="/movies" element={<Movies />} />
               <Route path="/movie/:id/info" element={<Movies />} />
               <Route path="/movie/:id/cast" element={<Movies />} />

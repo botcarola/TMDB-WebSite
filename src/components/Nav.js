@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import  logoNav from "../assets/logoNav.svg";
 import InputBusqueda from "./InputBusqueda";
+import  logoNav from "../assets/logoNav.svg";
 import { BsTv } from "react-icons/bs";
 import { BiMovie } from "react-icons/bi";
-import { useState } from "react";
 
 
 const Nav = () => {
@@ -32,8 +32,8 @@ const Nav = () => {
                         <BiMovie className={inputPelicula === true ? "text-red-600 m-2" : "m-2" } onClick={handleClickPelicula} />
                         <BsTv  className={inputSerie === true ? "text-red-600 m-2" : "m-2"} onClick={handleClickSerie} />
                     </div>
-                    {inputPelicula && <InputBusqueda key="1" tipo="Search movies" />}
-                    {inputSerie && <InputBusqueda key="2" tipo="Search series" />}
+                    {inputPelicula && <InputBusqueda tipo="Search movies" />}
+                    {inputSerie && <InputBusqueda tipo="Search series" />}
                 </div>               
             </div>
             <div className="flex w-1/6 justify-evenly items-center text-base">
