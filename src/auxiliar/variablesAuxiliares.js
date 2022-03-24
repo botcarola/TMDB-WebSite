@@ -1,7 +1,7 @@
-export const fetchMovie = "https://api.themoviedb.org/3/movie/550?api_key=d2db916ed787e45a269779c746706c07"
 export const apiKey = "d2db916ed787e45a269779c746706c07"
 
 //URLS MOVIES
+export const fetchMovie = "https://api.themoviedb.org/3/movie/550?api_key=d2db916ed787e45a269779c746706c07"
 export const popularMovies = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
 export const topRatedMovies = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
 export const upcomingMovies = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`
