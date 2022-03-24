@@ -13,8 +13,7 @@ const Movies = () => {
                 tipoCategoria={curr.tipoCategoria}
                 urlFetch={curr.urlFetch}
                 />
-            )}
-                                        
+            )}                                        
         </main>
     )
 }

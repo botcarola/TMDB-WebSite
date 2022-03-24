@@ -8,9 +8,10 @@ export const upcomingMovies = `https://api.themoviedb.org/3/movie/upcoming?api_k
 export const nowPlayingMovies = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
 
 //URLS SERIES
-export const tv = "https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US"
-export const topRatedSeries = "https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US"
+export const tv = `https://api.themoviedb.org/3/tv/{tv_id}?api_key=${apiKey}&language=en-US`
 export const popularSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`
+export const topRatedSeries = `https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&language=en-US&page=1`
+export const onTheAirSeries = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${apiKey}&language=en-US&page=1`
 
 
 export const propsMain = [
@@ -55,4 +56,23 @@ export const propsMovies = [
     }  
 ]
 
-
+export const propsSeries = [
+    {
+        rutaCategoria: "/tv/popular/page/1",
+        tipoCategoria: "Series populares",
+        urlFetch: popularSeries,
+        id: 1
+    },
+    {
+        rutaCategoria: "/tv/top_rated/page/1",
+        tipoCategoria: "Series con mejores críticas",
+        urlFetch: topRatedSeries,
+        id: 2
+    },
+    {
+        rutaCategoria: "/tv/on_the_air/page/1",
+        tipoCategoria: "Series al aire",
+        urlFetch: onTheAirSeries,
+        id: 3
+    } 
+]
