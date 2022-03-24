@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 import useFetch from "./useFetch";
@@ -7,13 +6,13 @@ import SimpleCard from "./SimpleCard"
 const FetchHome = ({rutaCategoria, tipoCategoria, urlFetch}) => {
 
     const elementos = useFetch(urlFetch)
+    console.log(elementos)
     const recortados = elementos.slice(0,5) 
-    console.log(recortados) 
 
     return (
     <div className="flex flex-col m-10 mb-5">
         <Link className="flex items-center text-3xl text-white mb-4 font-thin" to ={`/${rutaCategoria}`}>
-            {tipoCategoria} que son tendencia
+            {tipoCategoria}
         <BsArrowRightShort className="ml-3"/>
         </Link>
         <div className="flex">

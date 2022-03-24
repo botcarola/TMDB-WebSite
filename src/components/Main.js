@@ -1,24 +1,20 @@
 import {Carousel} from '3d-react-carousal';
 import Swiper from 'react-id-swiper';
-import FetchHome from "./FetchHome";
-import { popularMovies, popularSeries } from "../auxiliar/variablesAuxiliares";
-
+import FetchCards from "./FetchCards";
+import { propsMain } from "../auxiliar/variablesAuxiliares";
 
 const Home = () => {
 
     return(
         <main className='flex flex-col items-center mb-10'>
-        <FetchHome 
-        rutaCategoria="movies"
-        tipoCategoria="Películas" 
-        urlCategoria={popularMovies}
-        />
-        
-        <FetchHome
-        rutaCategoria="tv"
-        tipoCategoria="Series"
-        urlCategoria={popularSeries}
-        />
+            {propsMain.map(curr => 
+                <FetchCards 
+                key={curr.id}
+                rutaCategoria={curr.rutaCategoria}
+                tipoCategoria={curr.tipoCategoria}
+                urlFetch={curr.urlFetch}
+                />
+            )}
         </main>      
     )
 }

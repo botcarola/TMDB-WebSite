@@ -30,16 +30,16 @@ const Nav = () => {
                 <div className="flex items-center">
                     <div className="flex pr-3">
                         <BiMovie className={inputPelicula === true ? "text-red-600 m-2" : "m-2" } onClick={handleClickPelicula} />
-                        <BsTv  className={inputSerie === true ? "text-red-600 m-2" : "m-2"} onClick={handleClickSerie} />
+                        <BsTv className={inputSerie === true ? "text-red-600 m-2" : "m-2"} onClick={handleClickSerie} />
                     </div>
-                    {inputPelicula && <InputBusqueda tipo="Search movies" />}
-                    {inputSerie && <InputBusqueda tipo="Search series" />}
+                    {inputPelicula && <InputBusqueda tipo="Buscar películas" />}
+                    {inputSerie && <InputBusqueda tipo="Buscar series" />}
                 </div>               
             </div>
             <div className="flex w-1/6 justify-evenly items-center text-base">
                 <Link to="/">Home</Link>
-                <Link to="/movies">Movies</Link>
-                <Link to="/tv">TV</Link>
+                <Link to="/movies">Películas</Link>
+                <Link to="/tv">Series</Link>
             </div>          
         </nav> 
     )
