@@ -25,7 +25,7 @@ const Nav = () => {
         <nav className="bg-stone-900 flex text-gray-50 justify-between text-xl">
             <div className="flex w-2/6 ml-10 items-center">
                 <a  className="mr-8" href="https://www.themoviedb.org/" target="_blank">
-                    <img className="h-20" src={logoNav} alt="the movie database logo"/>
+                    <img className="h-20" src={logoNav} alt="Logo sitio the movie database"/>
                 </a>
                 <div className="flex items-center">
                     <div className="flex pr-3">
