@@ -22,7 +22,7 @@ const Nav = () => {
     }
 
     return (
-        <nav className="bg-stone-900 flex text-gray-50 justify-between text-xl">
+        <nav className="bg-zinc-900 border border-black flex text-gray-50 justify-between text-xl">
             <div className="flex w-2/6 ml-10 items-center">
                 <a  className="mr-8" href="https://www.themoviedb.org/" target="_blank">
                     <img className="h-20" src={logoNav} alt="Logo sitio the movie database"/>
