@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
-import useFetch from "./useFetch";
+import useFetch from "../hooks/useFetch";
 import SimpleCard from "./SimpleCard"
 
 const FetchHome = ({rutaCategoria, tipoCategoria, urlFetch}) => {
