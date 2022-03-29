@@ -4,7 +4,14 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Movies from "./components/Movies";
+import PopularMovies from "./components/PopularMovies";
+import TopRatedMovies from "./components/TopRatedMovies";
+import UpcomingMovies from "./components/UpcomingMovies";
+import NowPlayingMovies from "./components/NowPlayingMovies";
 import Tv from "./components/Tv";
+import PopularTv from "./components/PopularTv";
+import TopRatedTv from "./components/TopRatedTv";
+import OnAirTv from "./components/OnAirTv";
 import BusquedaIndefinida from './components/BusquedaIndefinida';
 
 const App = () => {
@@ -17,10 +24,10 @@ const App = () => {
               <Route path="/" element={<Main />} />
               <Route path="/movies" element={<Movies />} />
 
-              <Route path="/movies/popular/page/1" element={<Movies />} />
-              <Route path="/movies/top_rated/page/1" element={<Movies />} />
-              <Route path="/movies/upcoming/page/1" element={<Movies />} />
-              <Route path="/movies/now_playing/page/1" element={<Movies />} />              
+              <Route path="/movies/popular/page/:pagina" element={<PopularMovies />} />
+              <Route path="/movies/top_rated/page/:pagina" element={<TopRatedMovies />} />
+              <Route path="/movies/upcoming/page/:pagina" element={<UpcomingMovies />} />
+              <Route path="/movies/now_playing/page/:pagina" element={<NowPlayingMovies />} />              
 
               <Route path="/movie/:id/info" element={<Movies />} />
               <Route path="/movie/:id/cast" element={<Movies />} />
@@ -29,9 +36,9 @@ const App = () => {
 
               <Route path="/tv" element={<Tv />} />
 
-              <Route path="/tv/popular/page/1" element={<Movies />} />
-              <Route path="/tv/top_rated/page/1" element={<Movies />} />
-              <Route path="/tv/on_the_air/page/1" element={<Movies />} />
+              <Route path="/tv/popular/page/:pagina" element={<PopularTv />} />
+              <Route path="/tv/top_rated/page/:pagina" element={<TopRatedTv />} />
+              <Route path="/tv/on_the_air/page/:pagina" element={<OnAirTv />} />
 
               <Route path="/tv/:id/info" element={<Tv />} />
               <Route path="/tv/:id/season/:season" element={<Tv />} />

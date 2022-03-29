@@ -9,9 +9,11 @@ const Movies = () => {
             {propsMovies.map(curr => 
                 <FetchCards 
                 key={curr.id}
-                rutaCategoria={curr.rutaCategoria}
-                tipoCategoria={curr.tipoCategoria}
+                rutaTipo={curr.rutaTipo}
+                rutaSubtipo={curr.rutaSubtipo}
+                titulo={curr.titulo}                
                 urlFetch={curr.urlFetch}
+                recortarArray={true}
                 />
             )}                                        
         </main>
