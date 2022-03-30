@@ -4,21 +4,21 @@ import useFetch from "../hooks/useFetch";
 import SimpleCard from "./SimpleCard";
 import usePagination from "../hooks/usePagination";
 
-const FetchHome = ({rutaTipo, rutaSubtipo, titulo, urlFetch, recortarArray}) => {
+const FetchHome = ({tipoRuta, subtipoRuta, title, fetchUrl, recortarArray}) => {
 
-    const elementos = useFetch(urlFetch)
+    const elementos = useFetch(fetchUrl)
     const elementosRecortados = elementos.slice(0,5)   
     const verificarRecortarArray = () => recortarArray === true ? elementosRecortados : elementos
     const arrayVerificado = verificarRecortarArray()
     const paginado = usePagination() 
 
     return (
-    <div className="flex flex-col m-10 mb-5">
-        <Link className="flex items-center text-3xl text-white mb-4 font-thin" to ={`/${rutaTipo}/${rutaSubtipo}/page/${paginado}"`}>
-            {titulo}
+    <div className="flex flex-col mt-10 mb-5">
+        <Link className="flex items-center text-3xl text-white mb-4 font-thin" to ={`/${tipoRuta}/${subtipoRuta}/page/${paginado}"`}>
+            {title}
         <BsArrowRightShort className="ml-3"/>
         </Link>
-        <div className="flex">
+        <div className="flex flex-wrap justify-evenly">
             {arrayVerificado.map( curr => 
             <Link to="/" key={curr.id}>
                 <SimpleCard 

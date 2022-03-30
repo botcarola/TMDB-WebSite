@@ -10,10 +10,10 @@ const Main = () => {
             {propsMain.map(curr => 
                 <FetchCards 
                 key={curr.id}
-                rutaTipo={curr.rutaTipo}
-                rutaSubtipo={curr.rutaSubtipo}
-                titulo={curr.titulo}                
-                urlFetch={curr.urlFetch}
+                tipoRuta={curr.rutaTipo}
+                subtipoRuta={curr.rutaSubtipo}
+                title={curr.titulo}                
+                fetchUrl={curr.urlFetch}
                 recortarArray={true}
                 />
             )}

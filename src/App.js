@@ -4,11 +4,13 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Movies from "./components/Movies";
+import TrendingMovies from './components/TrendingMovies';
 import PopularMovies from "./components/PopularMovies";
 import TopRatedMovies from "./components/TopRatedMovies";
 import UpcomingMovies from "./components/UpcomingMovies";
 import NowPlayingMovies from "./components/NowPlayingMovies";
 import Tv from "./components/Tv";
+import TrendingTv from './components/TrendingTv';
 import PopularTv from "./components/PopularTv";
 import TopRatedTv from "./components/TopRatedTv";
 import OnAirTv from "./components/OnAirTv";
@@ -24,6 +26,7 @@ const App = () => {
               <Route path="/" element={<Main />} />
               <Route path="/movies" element={<Movies />} />
 
+              <Route path="/movies/trending/page/:pagina" element={<TrendingMovies />} />
               <Route path="/movies/popular/page/:pagina" element={<PopularMovies />} />
               <Route path="/movies/top_rated/page/:pagina" element={<TopRatedMovies />} />
               <Route path="/movies/upcoming/page/:pagina" element={<UpcomingMovies />} />
@@ -35,7 +38,8 @@ const App = () => {
               <Route path="/movie/:id/similar" element={<Movies />} />
 
               <Route path="/tv" element={<Tv />} />
-
+              
+              <Route path="/tv/trending/page/:pagina" element={<TrendingTv />} />
               <Route path="/tv/popular/page/:pagina" element={<PopularTv />} />
               <Route path="/tv/top_rated/page/:pagina" element={<TopRatedTv />} />
               <Route path="/tv/on_the_air/page/:pagina" element={<OnAirTv />} />

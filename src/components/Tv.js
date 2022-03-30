@@ -7,12 +7,12 @@ const Tv = () => {
         <main className='flex flex-col items-center mb-10'>
             {propsSeries.map(curr =>
                 <FetchCards
-                key={curr.id} 
-                rutaTipo={curr.rutaTipo}
-                rutaSubtipo={curr.rutaSubtipo}
-                titulo={curr.titulo}                
-                urlFetch={curr.urlFetch}
-                recortarArray={true}              
+                key={curr.id}
+                tipoRuta={curr.rutaTipo}
+                subtipoRuta={curr.rutaSubtipo}
+                title={curr.titulo}                
+                fetchUrl={curr.urlFetch}
+                recortarArray={true}             
                 />            
             )}                    
         </main>

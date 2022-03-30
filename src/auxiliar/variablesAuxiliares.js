@@ -1,4 +1,6 @@
 export const apiKey = "d2db916ed787e45a269779c746706c07"
+export const trendingMovies = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`
+export const trendingTv = `https://api.themoviedb.org/3/trending/tv/day?api_key=${apiKey}`
 
 //URLS MOVIES
 export const fetchMovie = "https://api.themoviedb.org/3/movie/550?api_key=d2db916ed787e45a269779c746706c07"
@@ -17,14 +19,14 @@ export const onTheAirSeries = `https://api.themoviedb.org/3/tv/on_the_air?api_ke
 export const propsMain = [
     {
         rutaTipo: "movies",
-        rutaSubtipo:"popular",
+        rutaSubtipo:"trending",
         titulo: "Películas que son tendencia",
         urlFetch: popularMovies,
         id: 1
     },
     {
         rutaTipo: "tv",
-        rutaSubtipo:"popular",
+        rutaSubtipo:"trending",
         titulo: "Series que son tendencia",
         urlFetch: popularSeries,
         id: 2
