@@ -13,7 +13,7 @@ const FetchHome = ({tipoRuta, subtipoRuta, title, fetchUrl, recortarArray}) => {
 
     return (
     <div className="flex flex-col mt-10 mb-5">
-        <Link className="flex items-center text-3xl text-white mb-4 font-thin" to ={`/${tipoRuta}/${subtipoRuta}/page/${paginado}"`}>
+        <Link className="flex items-center text-3xl text-white mb-4 font-thin" to ={`/${tipoRuta}/${subtipoRuta}/page/1`}>
             {title}
         <BsArrowRightShort className="ml-3"/>
         </Link>
