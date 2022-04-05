@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 import useFetch from "../hooks/useFetch";
 import SimpleCard from "./SimpleCard";
-import usePagination from "../hooks/usePagination";
 
 const FetchHome = ({tipoRuta, subtipoRuta, title, fetchUrl, recortarArray}) => {
 
