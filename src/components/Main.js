@@ -1,5 +1,3 @@
-import {Carousel} from '3d-react-carousal';
-import Swiper from 'react-id-swiper';
 import FetchCards from "./FetchCards";
 import { propsMain } from "../auxiliar/variablesAuxiliares";
 
