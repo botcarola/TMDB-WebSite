@@ -7,6 +7,7 @@ import usePagination from "../hooks/usePagination";
 const FetchHome = ({tipoRuta, subtipoRuta, title, fetchUrl, recortarArray}) => {
 
     const elementos = useFetch(fetchUrl)
+    console.log(elementos)
     const elementosRecortados = elementos.slice(0,5)   
     const verificarRecortarArray = () => recortarArray === true ? elementosRecortados : elementos
     const arrayVerificado = verificarRecortarArray()

@@ -62,7 +62,6 @@ export const propsMovies = [
         urlFetch: nowPlayingMovies,
         id: 4
     }
-
 ]
 
 export const propsSeries = [

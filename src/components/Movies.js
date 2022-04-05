@@ -1,7 +1,6 @@
 import FetchCards from "./FetchCards";
 import { propsMovies } from "../auxiliar/variablesAuxiliares";
 
-
 const Movies = () => {
 
     return(

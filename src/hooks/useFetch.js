@@ -5,7 +5,7 @@ const useFetch = (urlCategoria) => {
 
     useEffect(() => {
         const fetchApi = async () => {
-            const res = await fetch (urlCategoria)
+            const res = await fetch(urlCategoria)
             const data = await res.json()
             setElemento(data.results)
         }
