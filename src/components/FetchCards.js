@@ -10,7 +10,6 @@ const FetchHome = ({tipoRuta, subtipoRuta, title, fetchUrl, recortarArray}) => {
     const elementosRecortados = elementos.slice(0,5)   
     const verificarRecortarArray = () => recortarArray === true ? elementosRecortados : elementos
     const arrayVerificado = verificarRecortarArray()
-    const paginado = usePagination() 
 
     return (
     <div className="flex flex-col mt-10 mb-5">
